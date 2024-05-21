@@ -35,6 +35,16 @@
         </div>
 
 <script>
+let scrollContainer = document.querySelector(".gallery");
+let leftArrow = document.querySelector(".leftArrow");
+let rightArrow = document.querySelector(".rightArrow");
+
+scrollContainer.addEventListener("wheel", (evt) => {
+    evt.preventDefault();
+    scrollContainer.scrollLeft += evt.deltaY;
+});
+
+
 
 </script>
 
