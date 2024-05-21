@@ -26,7 +26,7 @@
 
 .gallery div img {
     width: 100%;
-    filter: grayscale(90%);
+    filter: grayscale(100%);
     transition: transform 0.5s;
 }
 
@@ -42,7 +42,7 @@
 }
 
 #leftArrow, #rightArrow {
-    width: 50px;
+    width: 70px;
     cursor: pointer;
     margin: 40px;
 }
