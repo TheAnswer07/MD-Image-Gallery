@@ -16,20 +16,18 @@
                 <div>
                     <span><img src="./images/créasYD/amnestyInt.jpg" alt="Amnesty International"></span>
                     <span><img src="./images/créasYD/caminoSenegal.jpg" alt="Camino Sénégal"></span>
-                </div>
-                <div>
                     <span><img src="./images/créasYD/nouvFrontSen.jpg"
-                            alt="Nouvelles Frontières Sénégal - West Africa"></span>
-                    <span><img src="./images/créasYD/senImmo.jpg" alt="Sénégalaise de l'Immobilier"></span>
+                        alt="Nouvelles Frontières Sénégal - West Africa"></span>
                 </div>
                 <div>
+                    <span><img src="./images/créasYD/senImmo.jpg" alt="Sénégalaise de l'Immobilier"></span>
                     <span><img src="./images/créasYD/senTours.jpg" alt="Sénégal Tours"></span>
                     <span><img src="./images/créasYD/athenaEdif.jpg" alt="Athéna Editions"></span>
                 </div>
-                <div>
+                <!-- <div>
                     <span><img src="./images/créasYD/k&T.jpg" alt="K&T Couture"></span>
                     <span><img src="./images/créasYD/ameTrade.jpg" alt="AmTrade"></span>
-                </div>
+                </div> -->
             </div>
             <img src="./images/arrows/arrow-right.png" id="rightArrow" alt="next">
         </div>
@@ -42,14 +40,17 @@ let rightArrow = document.getElementById("rightArrow");
 scrollContainer.addEventListener("wheel", (evt) => {
     evt.preventDefault();
     scrollContainer.scrollLeft += evt.deltaY;
+    scrollContainer.style.scrollBehavior = "";
 });
 
 leftArrow.addEventListener("click", ()=>{
-    scrollContainer.scrollLeft += 900;
+    scrollContainer.style.scrollBehavior = "smooth";
+    scrollContainer.scrollLeft -= 900;
 });
 
 rightArrow.addEventListener("click", ()=>{
-    scrollContainer.scrollLeft -= 900;
+    scrollContainer.style.scrollBehavior = "smooth";
+    scrollContainer.scrollLeft += 900;
 });
 
 </script>
